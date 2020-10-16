@@ -1,0 +1,23 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- spp
+entities:
+- account_type
+slots:
+  account_type:
+    type: categorical
+    values:
+    - premium
+    - basic
+responses:
+  utter_greet:
+  - text: hai , apa ada yang ingin ditanyakan ?
+  utter_welcome_basic:
+  - text: akun basic ?
+  utter_welcome_premium:
+  - text: akun pre ?
+  utter_spp:
+  - text: berapa spp
